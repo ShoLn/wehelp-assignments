@@ -48,6 +48,7 @@ avg({
 /////////////////////////////////////////////////////
 ////////////////////   3.  //////////////////////////
 /////////////////////////////////////////////////////
+//solution 1) O(N^2)
 function maxProduct(nums) {
   // 請用你的程式補完這個函式的區塊
   let length = nums.length;
@@ -60,6 +61,41 @@ function maxProduct(nums) {
     }
   }
   console.log(biggest);
+}
+maxProduct([5, 20, 2, 6]); // 得到 120
+maxProduct([10, -20, 0, 3]); // 得到 30
+maxProduct([-1, 2]); // 得到 -2
+maxProduct([-1, 0, 2]); // 得到 0
+maxProduct([-1, -2, 0]); // 得到 2
+
+// solution 2) O(N)
+function maxProduct(nums) {
+  let posiarray = [0, 0];
+  let negaarray = [0, 0];
+  nums.forEach((i) => {
+    if (i >= 0) {
+      if (i > posiarray[0]) {
+        posiarray[1] = posiarray[0];
+        posiarray[0] = i;
+      } else if (i > posiarray[1]) {
+        posiarray[1] = i;
+      }
+    } else {
+      if (i < negaarray[0]) {
+        negaarray[1] = negaarray[0];
+        negaarray[0] = i;
+      } else if (i < negaarray[1]) {
+        negaarray[1] = i;
+      }
+    }
+  });
+  if (nums.length == 2) {
+    console.log(nums[0] * nums[1]);
+  } else if (posiarray[0] * posiarray[1] > negaarray[0] * negaarray[1]) {
+    console.log(posiarray[0] * posiarray[1]);
+  } else {
+    console.log(negaarray[0] * negaarray[1]);
+  }
 }
 maxProduct([5, 20, 2, 6]); // 得到 120
 maxProduct([10, -20, 0, 3]); // 得到 30
@@ -86,8 +122,8 @@ console.log(result); // show [0, 2] because nums[0]+nums[2] is 9
 /////////////////////////////////////////////////////
 ////////////////////   5.  //////////////////////////
 /////////////////////////////////////////////////////
+// time complexity O(N)
 function maxZeros(nums) {
-  // 請用你的程式補完這個函式的區塊
   let biggest = 0;
   let count = 0;
   nums.forEach((e) => {
