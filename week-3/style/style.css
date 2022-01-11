@@ -133,11 +133,13 @@ div.allpicture div.picup div.pic img {
   height: 210px;
 }
 
-div.allpicture div.picup div.pic p {
+div.allpicture div.picup div.pic div.p {
+  display: table-cell;
   background-color: #bae4e0;
   width: 270px;
   height: 60px;
   text-align: center;
+  vertical-align: middle;
   padding: 0.3rem 0;
 }
 

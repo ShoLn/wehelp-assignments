@@ -75,11 +75,13 @@ div.allpicture {
         width: 270px;
         height: 210px;
       }
-      p {
+      div.p {
+        display: table-cell;
         background-color: rgb(186, 228, 224);
         width: 270px;
         height: 60px;
         text-align: center;
+        vertical-align: middle;
         padding: 0.3rem 0;
       }
     }

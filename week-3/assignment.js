@@ -26,11 +26,12 @@ getData(function (data) {
   let div_pic = document.querySelectorAll("div.pic");
   for (let i = 0; i < div_pic.length; i++) {
     let img = document.createElement("img");
-    let p = document.createElement("p");
+    let div_p = document.createElement("div");
+    div_p.classList.add('p')
     img.src = picArray[i];
-    p.innerText = titleArray[i];
+    div_p.innerText = titleArray[i];
     div_pic[i].appendChild(img);
-    div_pic[i].appendChild(p);
+    div_pic[i].appendChild(div_p);
   }
 });
 
@@ -61,12 +62,13 @@ button.addEventListener("click", () => {
       let div_pic = document.createElement("div"); // create div tag as div_pic
       div_pic.classList.add("pic"); // add class pic to div_pic
       let img = document.createElement("img"); // create img tag
-      let p = document.createElement("p"); // create p tag
+      let div_p = document.createElement("div"); // create div.p tag
+      div_p.classList.add('p')
       let div_pic_all = document.querySelectorAll("div.pic"); // select all div.pic
       img.src = picArray[div_pic_all.length]; // add src attribute to img
-      p.innerText = titleArray[div_pic_all.length]; // add innerText attribute to p
+      div_p.innerText = titleArray[div_pic_all.length]; // add innerText attribute to p
       div_pic.appendChild(img); // append img to div_pic
-      div_pic.appendChild(p); // append p to div_pic
+      div_pic.appendChild(div_p); // append p to div_pic
       let div_picup = document.querySelector("div.picup"); // select div.picup
       div_picup.appendChild(div_pic); // append div.pic to div.picup
     }
