@@ -73,10 +73,8 @@ promise
                 alert("No more data!!!!!!!!!!!");
             }
         }
-        //////// 讀取自動導入8張圖片 //////////
-        window.addEventListener("load", () => {
-            create_div_pic();
-        });
+        //////// 讀取自動導入8張圖片 //////////      
+        create_div_pic();     
         /////// 點擊button導入圖片 /////////
         let button = document.querySelector("button");
         button.addEventListener("click", () => {
