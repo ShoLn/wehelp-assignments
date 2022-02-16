@@ -22,6 +22,7 @@ button_search_username.addEventListener("click", (e) => {
         } else {
             console.log('失敗')
             div_search_username_result.innerText = "查無此帳號";
+            input_search_username.value = ""
         }
     }
     get_name();
