@@ -1,0 +1,102 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-size: 20px;
+}
+
+div.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    background-color: rgb(34, 68, 116);
+    div.p {
+        color: white;
+        font-weight: bolder;
+        font-size: 2rem;
+    }
+}
+
+div.p2con {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    div.p2 {
+        font-size: 1.5rem;
+        font-weight: bolder;
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    div.input {
+        input {
+            margin-bottom: 0.5rem;
+        }
+    }
+    button {
+        flex: none;
+        width: 100px;
+    }
+}
+
+div.p3 {
+    width: 100vw;
+    text-align: center;
+    margin: 3.5rem 1.2rem 0rem 0rem;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+div.search_username {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+    height: 1.8rem;
+    button {
+        padding: 0rem 0.4rem;
+        height: 100%;
+    }
+    input {
+        margin-right: 0.5rem;
+        height: 100%;
+    }
+}
+
+div.search_username_result {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+    height: 1rem;
+}
+
+div.update_name {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5rem;
+    height: 1.8rem;
+    button {
+        padding: 0rem 0.4rem;
+        height: 100%;
+    }
+    input {
+        margin-right: 0.5rem;
+        height: 100%;
+    }
+}
+
+div.update_name_result {
+    margin-top: 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+}
