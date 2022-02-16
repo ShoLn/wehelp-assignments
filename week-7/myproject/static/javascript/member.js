@@ -18,6 +18,7 @@ button_search_username.addEventListener("click", (e) => {
         if (response_body_json.data) {
             let search_name = response_body_json.data.name;
             div_search_username_result.innerText = search_name + ` (${response_body_json.data.username})`;
+            input_search_username.value = ""
         } else {
             console.log('失敗')
             div_search_username_result.innerText = "查無此帳號";
@@ -51,6 +52,7 @@ button_update_name.addEventListener("click", (e) => {
         if (response_body_json.ok) {
             update_name_result.innerText = "更新成功";
             welcome_name.innerText = `${input_update_name.value}，歡迎登入系統`;
+            input_update_name.value = ""
         } else {
             update_name_result.innerText = "更新失敗，更新名稱不可為空白";
         }
