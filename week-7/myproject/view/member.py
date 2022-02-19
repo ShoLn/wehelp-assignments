@@ -1,18 +1,9 @@
 from flask import *
-import mysql.connector
 
 
 member_blueprint = Blueprint(
     'member_blueprint', __name__, template_folder='../templates/member')
 
-db = mysql.connector.connect(
-    host="localhost",
-    port="3306",
-    user="root",
-    password="password",
-    database="website",
-    auth_plugin="mysql_native_password"
-)
 ########### 成功登入會員網址 ##############
 
 
